@@ -1,0 +1,313 @@
+/* 🎟️ Admin Seat Booking - Modern & Clean Design */
+.admin-seat-booking-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.admin-seat-booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: white;
+  border-bottom: 2px solid #dee2e6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.admin-seat-booking-header h1 {
+  font-size: 26px;
+  color: #2a5298;
+  margin: 0;
+}
+
+/* Back Button */
+.back-button {
+  background: #f0f0f0;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.back-button:hover {
+  background: #e0e0e0;
+}
+
+/* 🔄 Loading Spinner */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.loading-spinner {
+  border: 4px solid #ddd;
+  border-top: 4px solid #2a5298;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ⚠️ Error Message */
+.error-message {
+  background: #f8d7da;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+  color: #721c24;
+  font-weight: 600;
+  margin: 15px 0;
+}
+
+/* 🏛️ Layout */
+.admin-seat-booking-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 20px;
+}
+
+.requests-panel, .details-panel {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 15px;
+}
+
+/* 🔍 Filters & Search */
+.filter-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #f9fafb;
+  border-bottom: 1px solid #e9ecef;
+  border-radius: 6px;
+}
+
+.search-container {
+  display: flex;
+  gap: 8px;
+}
+
+.search-container input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 180px;
+}
+
+.search-container button, .refresh-button {
+  background: #f0f0f0;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-container button:hover, .refresh-button:hover {
+  background: #e0e0e0;
+}
+
+/* 📜 Requests List */
+.requests-list {
+  max-height: 600px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.request-item {
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-left: 4px solid #2a5298;
+  transition: all 0.2s;
+  background: #f9fafb;
+}
+
+.request-item:hover {
+  background: #e9ecef;
+}
+
+.request-item.selected {
+  background: #e6f3ff;
+  border-left-color: #2a5298;
+}
+
+/* 📝 Details Panel */
+.details-panel {
+  padding: 20px;
+}
+
+/* 📌 Form Tabs */
+.form-tabs {
+  display: flex;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.form-tabs button {
+  padding: 10px 15px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  position: relative;
+}
+
+.form-tabs button.tab-active {
+  color: #2a5298;
+}
+
+.form-tabs button.tab-active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #2a5298;
+}
+
+.form-tabs button:disabled {
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* ✍️ Form Inputs */
+.input-container {
+  margin-bottom: 12px;
+}
+
+.input-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.input-container input, .input-container textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.input-container textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* 🎯 Buttons */
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.action-button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  flex: 1;
+}
+
+.action-button.approve {
+  background: #28a745;
+  color: white;
+}
+
+.action-button.approve:hover {
+  background: #218838;
+}
+
+.action-button.delete {
+  background: #dc3545;
+  color: white;
+}
+
+.action-button.delete:hover {
+  background: #c82333;
+}
+
+.action-button.cancel {
+  background: #6c757d;
+  color: white;
+}
+
+.action-button.cancel:hover {
+  background: #5a6268;
+}
+
+.action-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ✅ Success & Error Messages */
+.success-message {
+  color: #28a745;
+  margin-top: 10px;
+  padding: 10px;
+  background: #d4edda;
+  border-radius: 6px;
+}
+
+.error-message {
+  color: #dc3545;
+  margin-top: 10px;
+  padding: 10px;
+  background: #f8d7da;
+  border-radius: 6px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 992px) {
+  .admin-seat-booking-content {
+      grid-template-columns: 1fr;
+  }
+  
+  .requests-list {
+      max-height: 50vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-seat-booking-header {
+      flex-direction: column;
+      gap: 10px;
+  }
+  
+  .filter-controls {
+      flex-direction: column;
+      gap: 10px;
+  }
+  
+  .form-actions {
+      flex-direction: column;
+  }
+}

@@ -1,0 +1,67 @@
+body {
+  background-color: #ffffff; /* Lighter (white) background */ 
+}
+
+.login-container {
+  /* Lighter overlay with a background image */
+  background: 
+              url('books.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.card {
+  border-radius: 12px !important;
+  background: #fff !important;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1) !important;
+  min-height: 50px !important;
+}
+
+.card-title {
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+  color: #333 !important;
+}
+
+.btn-primary {
+  background-color: #007bff !important ;
+  border: none !important;
+  padding: 10px !important;
+  font-size: 1.1rem !important;
+  transition: all 0.3s ease-in-out !important;
+  color: white !important;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3 !important;
+}
+
+.form-control, .form-select {
+  border-radius: 6px !important;
+  padding: 10px !important;
+}
+
+.form-label {
+  font-weight: 500 !important;
+  color: #333 !important;
+}
+
+
+.reset-password-container{
+  /* Lighter overlay with a background image */
+  background: 
+              url('books.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  height: 100vh !important;
+}
+
+.email-form-container{
+  /* Lighter overlay with a background image */
+  background: 
+              url('books.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  height: 100vh !important;
+}
